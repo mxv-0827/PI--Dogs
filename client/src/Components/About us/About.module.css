@@ -1,0 +1,47 @@
+.aboutContainer {
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+    background: -webkit-linear-gradient(to left, #2C5364, #203A43, #0F2027);  
+    background: linear-gradient(to left, #2C5364, #203A43, #0F2027);
+    flex: 1;
+    gap: 30px;
+    min-height: 90.9vh;
+}
+
+.infoContainer {
+    padding-top: 50px;
+    flex-basis: 50%;
+    flex: 1;
+}
+
+.imgContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 50%;
+
+    flex: 1;
+}
+
+.imgContainer img {
+    width: 550px;
+    height: 550px;
+    border-radius: 50%;
+
+    box-shadow: 0 0 40px white;
+}
+
+.redesContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 20px;
+    height: 50%;
+    width: 100%;
+}
+
+.redesContainer span {
+    font-style: oblique;
+}

@@ -1,0 +1,25 @@
+.landingContainer {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 100%;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    align-items: center;
+    width: 100%;
+}
+
+.content > div {
+    padding: 2rem;
+    text-align: center;
+    place-content: center;
+}
+
+.sliderContainer {
+    position: relative;
+    width: 100%;
+}

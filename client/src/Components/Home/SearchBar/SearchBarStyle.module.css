@@ -1,0 +1,27 @@
+.searchContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height : 50px;
+    gap: 20px;
+}
+
+.searchContainer input {
+    width : 250px;
+    height : 35px;
+    border-radius: 12px;
+    border: 0;
+    opacity : 0.65;
+    justify-content: center;
+    text-align: center;
+}
+
+.searchContainer button {
+    transition: background-color 1.5s ease;
+}
+
+.searchContainer button:hover:not([disabled]) {
+    color: white;
+    background-color: black;
+    border: white 3px solid;
+}

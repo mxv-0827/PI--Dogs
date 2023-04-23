@@ -1,0 +1,27 @@
+.topContainer {
+    width : 100%;
+    height : 600px;
+    background-image: url("../../assets/Perros/Perro_Amanecer.jpg");
+    background-position: center;
+    background-attachment: fixed;
+
+    display : flex;
+    place-content : center center;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding-bottom: 75px;
+
+    position: relative;
+}
+
+.topContainer::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #000000;
+    background: -webkit-linear-gradient(0deg, #00000061 0%, rgba(188, 71, 255, 0) 100%);
+    background: linear-gradient(0deg, #00000061 0%, rgba(188, 71, 255, 0) 100%);
+}

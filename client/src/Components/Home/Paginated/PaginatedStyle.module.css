@@ -1,0 +1,65 @@
+.cardsContainer {
+    display: flex;
+    width : 100%;
+    padding : 35px 0;
+    flex-wrap: wrap;
+    gap : 25px;
+    justify-content: center;
+}
+
+.btnContainer {
+    display: flex;
+    justify-content: center;
+    background: #131313;
+}
+
+.btnContainer button {
+    margin: 7.5px;
+    padding: 8px;
+    background-color: white;
+    border: rgb(104, 102, 102) 1px solid;
+    font-size: small;
+}
+
+.btnContainer button:hover:not([disabled]) {
+    color: white;
+    border : black 3px solid;
+	background: linear-gradient(90deg, #ee4040, #dbce1c, #47d11d, #24cece);
+	background-size: 400% 400%;
+	animation: gradiente 4s ease infinite;
+}
+
+.btnContainer button:disabled{
+    opacity: 0.7;
+    cursor: default;
+}
+
+.btnNextPrevious {
+    min-width: 90px;
+    padding: 7px 20px;
+}
+
+.btnNumber {
+    height : 20px;
+    width : 20px;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+}
+
+.spanError {
+    color: red;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+@keyframes gradiente {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}

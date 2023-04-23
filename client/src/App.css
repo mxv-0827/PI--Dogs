@@ -1,0 +1,9 @@
+.landing {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: -webkit-linear-gradient(to left, #2C5364, #203A43, #0F2027);  
+  background: linear-gradient(to left, #2C5364, #203A43, #0F2027);
+}

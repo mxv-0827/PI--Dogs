@@ -1,0 +1,175 @@
+.mainContainer {
+    background-image: url("../../assets/Perros/Fondo_Perro_Playa.jpg");
+    background-size : cover;
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-top: 40px;
+}
+
+.formContainer {
+    margin-top: -100px;
+    gap: 50px;
+    width : 600px;
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalPageContainer {
+    width: 100%;
+    height: 100%;
+    
+    z-index: 150;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background: rgba(0, 0, 0, 0.500);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.animatedShadow {
+    display: flex;
+    flex-direction: row;
+    gap : 35px;
+    align-items : center;
+    width: 300px;
+    height : 225px;
+    text-align: center;
+    position: relative;
+    background: white;
+    border: 2px solid #3f3f3f;
+
+    scale: 2.75;
+}
+
+.animatedShadow::before, 
+.animatedShadow::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background: linear-gradient(45deg, #5bf608, #29ee30, #18f1c2, #35f0ce, #1287ed, #1939ee, #10adf0, #22f8ca, #15ee61, #49f715);
+  background-size: 400%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: -1;
+  animation: animated-shadow 2.5s linear infinite alternate;
+}
+
+.animatedShadow::after {
+  filter: blur(30px);
+}
+
+.modalPage {
+    background: #131313;
+    top: 2px;
+    left: 2px;
+    position: absolute; 
+    opacity: 0.75;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    
+    gap: 50px;
+}
+
+.modalPage img {
+    justify-self: flex-start;
+    padding-top: 30px;
+    height: 80px;
+    width: 80px;
+
+    clip-path: inset(0);
+    animation: draw 5s ease-in-out forwards;
+}
+
+.modalPage span {
+    font-size: larger;
+    color: white;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    clip-path: inset(0);
+    animation: draw 4s ease-in-out forwards;
+}
+
+.mainContainer::before {
+    content: "";
+    width: 100%;
+    height: 300%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    background: rgba(0, 0, 0, 0.350);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+}
+
+.formContainer input, select {
+    width : 250px;
+    height : 35px;
+    border-radius: 12px;
+    border: 0;
+    opacity : 0.65;
+    justify-content: center;
+    text-align: center;
+}
+
+.formContainer button {
+    z-index : 100;
+}
+
+.formContainer span {
+    z-index: 100;
+}
+
+option{
+    text-align: center;
+}
+
+.spanTemp {
+    text-align: center;
+    color: rgb(10, 246, 167)
+}
+
+.spanError {
+    color: rgb(239, 209, 15);
+    font-size: larger;
+}
+
+
+@keyframes animated-shadow {
+    from {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 100% 0;
+    }
+    to {
+      background-position: 0 0;
+    }
+  }
+  
+
+@keyframes draw {
+    0% {
+      clip-path: inset(100% 0 0 0);
+    }
+    100% {
+      clip-path: inset(0 0 0 0);
+    }
+  }

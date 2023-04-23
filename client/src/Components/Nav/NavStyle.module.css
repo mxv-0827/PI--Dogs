@@ -1,0 +1,51 @@
+.header {
+    position : sticky;
+    top : 0;
+    padding : 12px 10%;
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    align-items: center;
+    background-color: black;
+    z-index: 200;
+}
+
+.navList {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+    font-weight: bold;
+}
+
+.navList li, .logoContainer{
+    transform-origin: center;
+    transition: all 0.5s ease-in-out;
+}
+
+.navList li:hover {
+    transform: scale(1.15);
+}
+
+.logoContainer {
+    padding-left: 0;
+    height: 60px;
+    width: auto;
+}
+
+.logoContainer:hover {
+    transform: scale(1.2);
+}
+
+.navList > a:hover {
+    cursor: pointer;
+    color: white;
+}
+
+.navList > a {
+    text-decoration: none;
+    color : white;
+}
+
+
